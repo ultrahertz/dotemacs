@@ -1,0 +1,81 @@
+* James Fletcher's Emacs configuration
+** Configuration
+*** User info
+Configure my name and email address properly.
+#+BEGIN_SRC emacs-lisp
+(setq user-full-name "James Fletcher"
+      user-mail-address "m@jef.me.uk")
+#+END_SRC
+*** Common lisp for Emacs
+(require 'cl)
+** Package management
+Since Emacs 24, Emacs includes the Emacs Lisp Package Archive (ELPA)
+by default. This provides a nice way to install additional
+packages. Since the default package archive doesn't include everything
+necessary, the marmalade, and melpa repositories are also added. 
+*** Default packages
+Define a list of default packages that I regularly require.
+#+BEGIN_SRC emacs-lisp
+(defvar jamesf/packages '(auto-complete
+                          autopair
+                          deft
+                          erlang
+                          feature-mode
+                          flycheck
+                          gist
+                          go-mode
+                          graphviz-dot-mode
+                          haml-mode
+                          haskell-mode
+                          htmlize
+                          magit
+                          markdown-mode
+                          marmalade
+                          nodejs-repl
+                          o-blog
+                          paredit
+                          restclient
+                          smex
+                          sml-mode
+                          web-mode
+                          writegood-mode
+                          yaml-mode)
+  "Default packages")
+#+END_SRC
+*** Install default package
+Check to see if default packages are available at boot time and
+install them if not.
+#+BEGIN_SRC emacs-lisp
+(defun jamesf/packages-installed-p ()
+  (loop for pkg in jamesf/packages
+        when (not (package-installed-p pkg)) do (return nil)
+        finally (return t)))
+
+(unless (jamesf/packages-installed-p)
+  (message "%s" "Refreshing package database...")
+  (package-refresh-contents)
+  (dolist (pkg jamesf/packages)
+    (when (not (package-installed-p pkg))
+      (package-install pkg))))
+#+END_SRC
+** Start-up options
+I want to skip straight to the scratch buffer. This turns off the
+splash screen and puts me straight into the scratch buffer. I don't
+really care to have anything in there either, so turn off the message
+while we're at it. Since I end up using org-mode most of the time, set
+the default mode accordingly. 
+#+BEGIN_SRC emacs-lisp
+(setq inhibit-splash-screen t
+      initial-scratch-message nil
+      initial-major-mode 'org-mode)
+#+END_SRC
+
+** Extra functionality
+Include extra functionality provided by emacs24-starter-kit.
+#+BEGIN_SRC emacs-lisp
+(defvar starter-kit-extras '("haskell" "js" "misc-recommended" "org" "perl"))
+(mapcar 'starter-kit-load starter-kit-extras)
+;; (starter-kit-load "haskell")
+#+END_SRC
+* 
+* 
