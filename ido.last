@@ -1,0 +1,47 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/jef/Private/" . "org/")
+ ("/home/" . "jef/")
+ ("/" . "home/")
+ ("/home/jef/" . ".emacs.d/")
+ ("/home/jef/src/haskell/" . "Ch01/")
+ ("/home/jef/src/" . "haskell/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/jef/.emacs.d/"
+ "/home/jef/Private/org/"
+ "/home/jef/src/haskell/Ch01/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "jef.org"
+ "hacking.org"
+ "Main.hs"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/jef/.emacs.d/" (21660 2269 79271 176000) ".smex-items" "abbrev_defs" "auto-save-list/" "starter-kit-org.el" "starter-kit-bindings.org" "ac-comphist.dat" "literate-starter-kit-pkg.el" "places" "var/" "starter-kit-perl.org" "ido.last" "starter-kit-python.org" "starter-kit-publish.org" "starter-kit-misc-recommended.org" "./" "starter-kit-misc-recommended.el" "starter-kit-ruby.org" "starter-kit-g-client.org" "starter-kit-haskell.el" "starter-kit-org.org" "starter-kit-misc.org" "starter-kit.el" "starter-kit-registers.org" "elpa/" "README" "starter-kit-haskell.org" "starter-kit-bindings.el" "starter-kit-eshell.org" ".git" "starter-kit-defuns.el" "starter-kit-defuns.org" ".package-last-update" "jef.org" "recentf" "starter-kit-js.el" "COPYING" "starter-kit-yasnippet.org" "init.el" "backups/" "snippets/" "starter-kit-gnus.org" "starter-kit-lisp.org" "../" "src/" "starter-kit-js.org" "starter-kit.org" "starter-kit-latex.org" "Makefile" "jef.el" "smex-items" "starter-kit-scala.org" "starter-kit-perl.el" "starter-kit-misc.el" "starter-kit-registers.el")
+
+ ("/home/jef/Private/org/" (21660 2232 305937 742000) ".#learn-org-mode.org" "fletcher.org" "./" "jamesf.org" "hacking.org" "#learn-python.org#" "#hacking.org#" "jef.org" "../" "deft/" "todo.org" "learn-org-mode.org" "#learn-org-mode.org#" "gtd.org")
+
+ ("/home/jef/src/haskell/Ch01/" (21659 30646 129293 519000) "input.txt" "#Main.hs#" "./" "../" "Main.hs")
+
+ ("/home/jef/Private/" (21630 34151 45968 709000) "org/" "./" "../" "docs/")
+
+ ("/home/jef/" (21659 64063 832594 273000) "Dropbox/" ".irssi/" "git/" ".dmenu_cache" ".xinitrc.bak" ".mozilla/" ".bash_history" ".ssh/" ".w3m/" ".mix/" ".httpie/" ".xconf" ".viminfz.tmp" "var/" ".aws/" ".bash_logout" ".byobu/" "Private/" ".Xresources" ".nmarriot.conf" ".xsession" ".tmux.conf" ".gitconfig" ".esd_auth" ".vagrant.d/" ".macromedia/" "./" ".kerl/" ".java/" ".dbus/" ".python_history" ".mplayer/" ".npm/" ".vimrc.local" ".urxvt/" ".ivy2/" ".viminfo" ".perlbrew/" ".erlang_history" ".Xauthority" ".eclipse/" ".terminfo/" ".bash_functions" ".gnome2/" ".ghc/" ".local/" ".gmrun_history" ".rnd" ".cache/" "perl5/" ".cpanm/" ".composer/" ".nvm/" ".bash_profile" ".karaf/" ".codex" ".bash/" ".vimrc.20141224_190941" "bin/" ".viminfo.tmp" "structured-haskell-mode/" ".gstreamer-0.10/" ".wicd/" ".sage/" ".fetch/" ".erlang.cookie" ".pip/" ".xinitrc.bak2" ".conkyrc" ".elinks/" ".vimrc" ".xmobarrc" ".haskell-vim-now/" "opt/" ".yaws/" ".xinitrc" ".bashrc" ".recently-used" ".fehbg" ".xmonad/" ".pki/" ".cabal/" ".wmii/" "../" ".emacs.d/" "src/" ".darcs/" ".texlive/" ".TeXmacs/" ".adobe/" ".cpan/" ".gnupg/" ".lesshst" ".icons/" ".gnome2_private/" ".m2/" "dots/" ".config/" ".vim/" ".zotonic/" "Desktop/")
+
+ ("/home/" (21629 62437 322868 294000) "jef/" "./" "lost+found/" "../")
+
+ ("/home/jef/src/haskell/" (21659 9694 762726 471000) "input.txt" "LC_basic.lhs" "io/" "misc/" "json/" "htmlparse/" "file.hs" "edit/" "Ch01/" "yi/" "./" "xml/" "logparse/" "guestbook/" "yesod/" "filedb/" "rest/" "../" "output.txt" "binarytree/" "xmonad-darcs/" "Haskell-Data-Analysis-Cookbook/" "todo/" "BookStore.hs")
+
+ ("/home/jef/src/" (21658 16913 729173 57000) "git/" "haskell/" "lucene-4.10.2/" "./" "xml/" "cpp/" "erlang/" "c/" "perl/" "lisp/" "darcs/" "../")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

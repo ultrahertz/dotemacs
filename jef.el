@@ -1,4 +1,8 @@
 
+(defvar starter-kit-extras '("haskell" "js" "misc-recommended" "org" "perl"))
+(mapcar 'starter-kit-load starter-kit-extras)
+;;(starter-kit-load "misc-recommended")
+
 (setq user-full-name "James Fletcher"
       user-mail-address "m@jef.me.uk")
 
@@ -12,7 +16,6 @@
                           go-mode
                           graphviz-dot-mode
                           haml-mode
-                          haskell-mode
                           htmlize
                           magit
                           markdown-mode
@@ -74,17 +77,24 @@
 (setq org-log-done t
       org-todo-keywords '((sequence "TODO" "INPROGRESS" "DONE"))
       org-todo-keyword-faces '(("INPROGRESS" . (:foreground "blue" :weight bold))))
+
 (add-hook 'org-mode-hook
           (lambda ()
             (flyspell-mode)))
+
 (add-hook 'org-mode-hook
           (lambda ()
             (writegood-mode)))
+
+(setq org-indent-mode t)
+
+(setq org-todo-keywords "#+TODO: TODO(t) STARTED(s) WAITING(w) | DONE(d) CANCELED(c)")
 
 (global-set-key (kbd "C-c a") 'org-agenda)
 (setq org-agenda-show-log t
       org-agenda-todo-ignore-scheduled t
       org-agenda-todo-ignore-deadlines t)
+
 (setq org-directory "~/Private/org")
 (setq org-default-notes-file "~/Private/org/organizer.org")
 (setq org-agenda-files (list "~/Private/org/fletcher.org"
@@ -176,9 +186,10 @@
 (setq ispell-local-dictionary "british")
 (setq-default ispell-list-command "list")
 
-(load-theme 'leuven t)
-(set-default-font "Terminus-10")
+(require 'shm)
+  (add-hook 'haskell-mode-hook 'structured-haskell-mode)
+;;  (set-face-background 'shm-current-face "NavyBlue")
+;;  (set-face-background 'shm-quarantine-face "DarkSlateGray")
 
-(defvar starter-kit-extras '("haskell" "js" "misc-recommended" "org" "perl"))
-(mapcar 'starter-kit-load starter-kit-extras)
-;; (starter-kit-load "haskell")
+(load-theme 'wombat t)
+(set-default-font "Terminus-10")
